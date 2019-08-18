@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BarberShOWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About_details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="H3text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ptext" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Ultext1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ultext" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="H4text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Single_Img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AboutCenter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="H2text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Spantext" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Ptext" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Appoint">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="H2text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spantext" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ptext" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MainSlider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="H2text" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="H1text" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Our_Cartinca">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="H3text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ptext" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Our_Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="H2text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpanText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ptext" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Working_House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Days" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Span_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BarberShOWEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About_details" EntityType="Self.About_details" />
+    <EntitySet Name="AboutCenter" EntityType="Self.AboutCenter" />
+    <EntitySet Name="Appoint" EntityType="Self.Appoint" />
+    <EntitySet Name="MainSlider" EntityType="Self.MainSlider" />
+    <EntitySet Name="Our_Cartinca" EntityType="Self.Our_Cartinca" />
+    <EntitySet Name="Our_Services" EntityType="Self.Our_Services" />
+    <EntitySet Name="Working_House" EntityType="Self.Working_House" />
+  </EntityContainer>
+</Schema>

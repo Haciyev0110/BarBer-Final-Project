@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BarberShOWModelStoreContainer" CdmEntityContainer="BarberShOWEntities">
+    <EntitySetMapping Name="About_details">
+      <EntityTypeMapping TypeName="BarberShOWModel.About_details">
+        <MappingFragment StoreEntitySet="About_details">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="H3text" ColumnName="H3text" />
+          <ScalarProperty Name="Ptext" ColumnName="Ptext" />
+          <ScalarProperty Name="Ultext1" ColumnName="Ultext1" />
+          <ScalarProperty Name="Ultext" ColumnName="Ultext" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="H4text" ColumnName="H4text" />
+          <ScalarProperty Name="Single_Img" ColumnName="Single_Img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AboutCenter">
+      <EntityTypeMapping TypeName="BarberShOWModel.AboutCenter">
+        <MappingFragment StoreEntitySet="AboutCenter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="H2text" ColumnName="H2text" />
+          <ScalarProperty Name="Spantext" ColumnName="Spantext" />
+          <ScalarProperty Name="Ptext" ColumnName="Ptext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appoint">
+      <EntityTypeMapping TypeName="BarberShOWModel.Appoint">
+        <MappingFragment StoreEntitySet="Appoint">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="H2text" ColumnName="H2text" />
+          <ScalarProperty Name="Spantext" ColumnName="Spantext" />
+          <ScalarProperty Name="Ptext" ColumnName="Ptext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainSlider">
+      <EntityTypeMapping TypeName="BarberShOWModel.MainSlider">
+        <MappingFragment StoreEntitySet="MainSlider">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="H2text" ColumnName="H2text" />
+          <ScalarProperty Name="H1text" ColumnName="H1text" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Our_Cartinca">
+      <EntityTypeMapping TypeName="BarberShOWModel.Our_Cartinca">
+        <MappingFragment StoreEntitySet="Our_Cartinca">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="H3text" ColumnName="H3text" />
+          <ScalarProperty Name="Ptext" ColumnName="Ptext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Our_Services">
+      <EntityTypeMapping TypeName="BarberShOWModel.Our_Services">
+        <MappingFragment StoreEntitySet="Our_Services">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="H2text" ColumnName="H2text" />
+          <ScalarProperty Name="SpanText" ColumnName="SpanText" />
+          <ScalarProperty Name="Ptext" ColumnName="Ptext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Working_House">
+      <EntityTypeMapping TypeName="BarberShOWModel.Working_House">
+        <MappingFragment StoreEntitySet="Working_House">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Span_Time" ColumnName="Span_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

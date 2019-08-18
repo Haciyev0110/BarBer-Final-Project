@@ -1,0 +1,221 @@
+﻿@using Barber_Final.Models
+@model Barber_Final.Vm.ViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+	<section id="slider">
+			<div id="carousel-example-generic" class="carousel slide">
+				<div class="carousel-inner" role="listbox">
+					<!-- Item 1 -->
+                   @foreach (var item in Model.mainSlider)
+                   {
+                    <div class="item @item.Class slide1 " style="background-image: url(/assets/img/slider/@item.Img);">
+                        <div class="table">
+                            <div class="table-cell">
+                                <div class="intro-text">
+                                    <div class="title clearfix">
+                                        <h2>  @item.H2text<br> </h2>
+                                        <h1>@item.H1text</h1>
+                                    </div>
+                                    <a href="#" class="btn btn-trnsp btn-big">PURCHASE NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                   }
+                        
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+					
+					<!-- Item 2 -->
+					
+				<!-- End Wrapper for slides-->
+				<!-- Carousel Pagination -->
+				</div>
+			</div>
+		</section>
+
+<section id="about" class="about-area section-big">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>@Model.Aboutus.H2text<span>@Model.Aboutus.Spantext</span></h2>
+                    <p>@Model.Aboutus.Ptext </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- About Text -->
+            <div class="col-md-6">
+                <div class="about-details mt-30">
+                    <h3 class="subtitle">    @Model.Detalis.H3text</h3>
+                    <p>@Model.Detalis.Ptext</p>
+                    <ul>
+                        <li>@Model.Detalis.Ultext1</li>
+                        <li>@Model.Detalis.Ultext</li>
+                    </ul>
+                    <div class="author-details">
+                        <div class="author-img">
+                            <img src="assets/img/about/@Model.Detalis.Img" alt="">
+                        </div>
+                        <div class="author-sign">
+                            <h4>@Model.Detalis.H4text</h4>
+                            <img src="assets/img/about/@Model.Detalis.Single_Img" alt="">
+                            <div class="author-link">
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-skype"></i></a>
+                                <a href="#"> <i class="fa fa-google-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Image -->
+            <div class="col-md-6">
+                <div class="opening-hours-wrap mt-30">
+                    <h3>Working Hours</h3>
+                    <ul class="opening-hours">
+                        @foreach (var item in Model.House)
+                        {
+                            <li>@item.Days<span class="pull-right">@item.Span_Time</span></li>
+
+                        }
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service" class="service-area section-big">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>@Model.Servicesss.H2text <span>@Model.Servicesss.SpanText </span></h2>
+                    <p>@Model.Servicesss.Ptext </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="home-services">
+
+                @foreach (var item in Model.Cartinca)
+                {
+                       <!-- Service box -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="service-box">
+                            <i class="@item.Icon"></i>
+                            <h3 class="subtitle">@item.H3text</h3>
+                            <p>@item.Ptext</p>
+                        </div>
+                    </div>
+                }
+
+             
+
+            
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div id="book" class="book-area section-big" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-title">
+                    <h2>@Model.Apoints.H2text<span>@Model.Apoints.Spantext</span></h2>
+                    <p>@Model.Apoints.Ptext</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="contact-form-book mt-30">
+
+                    <!-- Submition status -->
+                    <div id="form-appoint"></div>
+
+                    <form class="appointment-form" id="ajax-appoint" method="post" action="http://designcarebd.com/barberda/assets/appoint.php">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_name" name="b_name" placeholder="Name" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_email" name="b_email" placeholder="Email" type="email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="b_phone" name="b_phone" placeholder="Phone" type="text">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control date-pick" id="datepicker" name="appontment-date" placeholder="Date" type="text">
+                                    <i class="icon fa fa-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select id="catagory" name="catagory" class="form-control select-picker-icon">
+                                        <option value="">Choose Services</option>
+                                        <option value="Haircut">Haircut</option>
+                                        <option value="shave">shave</option>
+                                        <option value="Hair wash">Hair wash</option>
+                                        <option value="Clean up">Clean up</option>
+                                        <option value="Face">Face</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select id="bar" name="bar" class="form-control select-picker-icon">
+                                        <option value="">Barber</option>
+                                        <option value="Smith">Smith</option>
+                                        <option value="Ursula">Ursula</option>
+                                        <option value="Jhon Smith">Jhon Smith</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+                                        <option value="Bernard Dent">Bernard Dent</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="b_message" id="b_message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt20">
+                                <button class="btn btn-default">Book Appointment</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

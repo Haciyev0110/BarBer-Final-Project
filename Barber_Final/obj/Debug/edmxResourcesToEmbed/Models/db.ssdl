@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BarberShowModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="About_details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="H3text" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ptext" Type="nvarchar" MaxLength="300" />
+    <Property Name="Ultext1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ultext" Type="nvarchar" MaxLength="100" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="H4text" Type="nvarchar" MaxLength="50" />
+    <Property Name="Single_Img" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AboutCenter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="H2text" Type="nvarchar" MaxLength="100" />
+    <Property Name="Spantext" Type="nvarchar" MaxLength="20" />
+    <Property Name="Ptext" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Appoint">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="H2text" Type="nvarchar" MaxLength="50" />
+    <Property Name="Spantext" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ptext" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="MainSlider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Img" Type="nvarchar" MaxLength="255" />
+    <Property Name="H2text" Type="nvarchar" MaxLength="200" />
+    <Property Name="H1text" Type="nvarchar" MaxLength="200" />
+    <Property Name="Class" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Our_Cartinca">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+    <Property Name="H3text" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ptext" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Our_Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="H2text" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpanText" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ptext" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Working_House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Days" Type="nvarchar" MaxLength="20" />
+    <Property Name="Span_Time" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="BarberShowModelStoreContainer">
+    <EntitySet Name="About_details" EntityType="Self.About_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AboutCenter" EntityType="Self.AboutCenter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Appoint" EntityType="Self.Appoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MainSlider" EntityType="Self.MainSlider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Our_Cartinca" EntityType="Self.Our_Cartinca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Our_Services" EntityType="Self.Our_Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Working_House" EntityType="Self.Working_House" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
